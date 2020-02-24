@@ -2,21 +2,42 @@
     font-family: 'Ubuntu', 'Roboto', sans-serif;
 }
 
-.masthead {
-    background: url("images/341016.png");
-    padding-top: 70px;
+header .carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
 }
 
-.masthead .row {
-    padding: 60px 0px;
+header .carousel-caption {
+    color: black;
+    margin: 15% 0;
+}
+
+header .carousel-indicators {
+    width: 125px;
+    margin-bottom: -70px;
+    margin-left: 0;
+}
+
+.carousel-indicators li {
+    border-radius: 70%;
+    height: 14px;
+    width: 14px;
+}
+
+header li.active {
+    background-color: #ff7300;
 }
 
 .navbar {
     border-bottom: 2px solid #ff7300;
+    z-index: 5;
 }
 
-.navbar-brand {
-    font-size: 40px;
+nav ul {
+    margin: 0;
+    padding: 10px;
 }
 
 .btn-primary {
@@ -49,21 +70,19 @@
     padding: 180px 0;
 }
 
+.gradient .row .row {
+    width: 110%;
+}
+
 .img {
     margin: 0 auto;
     width: 90vw;
     height: 90vh;
     background: url("images/870276.jpg");
-    display: grid;
-    grid-template-areas: "c c c" "c c d";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
 .lorem1-inner-box {
-    width: 30vw;
-    padding: 80px;
-    grid-area: d;
+    margin-right: -1px;
 }
 
 .img1 {
@@ -79,16 +98,8 @@
     margin-left: 20%;
 }
 
-.grid1 {
-    display: grid;
-    grid-template-areas: "c c d d d d";
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 25px;
-    padding-left: 125px;
-}
-
-.grid1 form {
-    grid-area: c;
+form {
+    padding-left: 125px !important;
 }
 
 .orange-h1,
@@ -121,11 +132,10 @@
 }
 
 .float-img {
-    width: 30vw;
-    height: 45vh;
+    width: 40vw;
+    height: 50vh;
     margin-left: 50%;
     margin-top: -5%;
-    background: url("images/898225.jpg");
 }
 
 .float-img,
@@ -157,8 +167,15 @@
 .footer {
     background: #424141;
     height: 80px;
-    line-height: 80px;
     padding: 0 35px;
+}
+
+.footer-logo {
+    background: url('images/25w.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 38px;
 }
 
 @media (max-width: 640px) {
@@ -175,5 +192,8 @@
     .lorem1-inner-box {
         width: 60vw;
         padding: 40px;
+    }
+    nav {
+        padding: 15px;
     }
 }
